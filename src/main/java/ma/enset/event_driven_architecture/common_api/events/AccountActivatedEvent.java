@@ -1,0 +1,16 @@
+package ma.enset.event_driven_architecture.common_api.events;
+
+import lombok.Getter;
+import ma.enset.event_driven_architecture.common_api.enums.AccountStatus;
+
+public class AccountActivatedEvent extends BaseEvent<String>{
+
+   @Getter private AccountStatus status;
+
+    public AccountActivatedEvent(String id, AccountStatus status) {
+        super(id);
+
+        this.status = status;
+
+    }
+}
