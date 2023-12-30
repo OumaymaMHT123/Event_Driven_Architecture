@@ -52,13 +52,13 @@ La fonction de décision
    
 
 6.  Query
-Operation
 
+Operation
 
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor
-   public class Operation {
-
+   
+    public class Operation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -78,12 +78,12 @@ Account
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
-public class Account {
+
+    public class Account{
     @Id
     private String id;
     private String currency;
     private double balance;
-
     @Enumerated(EnumType.STRING)
     private AccountStatus accountStatus;
 
