@@ -20,6 +20,7 @@
 
 5. Aggregate
 
+
    @Aggregate
 public class AccountAggregate {
 
@@ -30,6 +31,8 @@ public class AccountAggregate {
 
     private AccountStatus status;
 }
+
+
 
 La fonction de décision
 
@@ -50,11 +53,11 @@ La fonction de décision
 
 6.  Query
 Operation
-package me.elaamiri.accountcqrseventsourcing.query.entities;
+
 
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor
-public class Operation {
+   public class Operation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -71,7 +74,7 @@ public class Operation {
 }
 
 Account
-package me.elaamiri.accountcqrseventsourcing.query.entities;
+
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
@@ -87,3 +90,5 @@ public class Account {
     @OneToMany(mappedBy = "account")
     private Collection<Operation> operations;
 }
+
+
